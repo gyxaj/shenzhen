@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>深圳社区家园网</title>
+        <style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			li{
+				list-style:none;
+			}
+			a{
+				text-decoration:none;
+			}
+			img{
+				display:block;
+			}
+			h2,h3{
+				font-weight:normal;
+			}
+
+			.gWidth{
+				width:1600px;
+				margin:0 auto;
+				background:#F2F2F1;
+			}
+			.clearfix::after{
+				content:'';
+				display:block;
+				clear:both;
+			}
+			.fl{
+				float: left;
+			}
+			.fr{
+				float: right;
+			}
+			.nav{
+		        background: #303440;
+		        margin-bottom:21px;
+			}
+			.nav ul{
+				padding-left:299px;			
+			}
+			.nav li a{
+				display: block;
+				height:60px;
+				line-height:60px;
+				color: #D2D2D2;
+				padding:0 32px;
+			}
+			.nav li a:hover,.nav li a.act{
+				color:#fff;
+				background: #13B5B1;
+		        padding: 0 34px;
+			}
+
+			.content{
+				width:1002px;
+				margin:0 auto;
+				background:#F2F2F1;
+			}
+			.cont1 div.img{
+				width:357px;
+				height:293px;
+				padding-top:12px;
+				padding-left:13px;
+				background:#fff;
+				margin-right:15px;
+			}
+			.cont1 div.img .tu{
+				width: 345px;
+				height: 245px;
+				position: relative;				
+			} 
+			.cont1 .buttons {
+				position: absolute;
+				right: 8px;
+				bottom: 10px;
+				font-size: 0;
+			}
+			.cont1 .buttons span{
+				cursor:pointer;
+				display:inline-block;
+				width: 16px;
+				height: 16px;
+				line-height:16px;
+				text-align:center;
+				color:#ccc;
+				font-size: 12px;
+				background: #333;
+				border: 1px solid;
+				margin-left: 6px;
+				vertical-align: bottom;   /*底对齐*/
+
+			}
+			.buttons span.act,.buttons span:hover {
+				color: #F60;
+				width: 26px;
+				height: 26px;
+				line-height: 26px;
+				border-radius: 0;
+			}
+			.cont1 div.img p{
+				width: 331px;
+				height: 30px;
+				background:#333333;
+				border:1px solid #CCCCCC;
+				color:#FF6500;
+				line-height:30px;
+				font-size:14px;
+				padding-left:14px;
+				margin-top:5px;
+			}
+			.cont1 .ul ,.cont2 .ul2{
+				width:277px;
+				height:305px;
+				background:#fff;
+				padding-left:12px;
+				padding-right:12px;				
+				margin-right:15px;
+			}
+			.cont1 .ul h2,.cont2 .ul2 h2,.cont3 .ico .h h2,.cont4 .sp .h h2,.cont6 .r .h h2{
+				font-size:16px;
+				color:#04ABA6;
+				font-family: "微软雅黑";
+				height:36px;
+				line-height:36px;
+				border-bottom:2px solid #33ABA9;
+				margin-top:4px;
+				background:url("images/cont1-2.png") left center no-repeat;
+				padding-left:28px;
+			}
+			.cont1 ul,.cont2 ul{				
+				padding-top:7px;
+			}
+			.cont1 .ul h2 a,.cont2 .ul2 h2 a,.cont3 .ico .h h2 a,.cont4 .sp h2 a,.cont5 .h2 a,.cont6  .r .h a.a{
+				font-size:12px;
+				color:#999999;
+			}
+			.cont1 ul a{
+				font-size:14px;
+				line-height:28px;
+				color:#333333;
+				background:url("images/cont1-3.png") 7px center no-repeat;
+				padding-left:23px;
+				text-align:right;
+			}
+			.cont1 ul span,.cont2 ul span{
+				font-size:8px;
+				color:#999;
+				float: right;
+			}
+			.cont1 div.right{
+				width: 276px;
+				height: 279px;
+				background:#fff;
+				padding:13px 12px;
+			}
+			.cont1 .right .d1,.cont1 .right .d2,.cont1 .right .d3{
+				width:169px;
+				height:70px;
+				background:#379BE9;
+				font-family: "微软雅黑";
+				padding-top:19px;
+				line-height:28px;
+				color:#FFFFFF;
+				margin-bottom:6px;
+			}
+			.cont1 .right .d1{
+				background:#379BE9 url("images/cont1-4.png") 40px center no-repeat;		
+				padding-left:108px;		
+			}
+			.cont1 .right .d2{
+				background:#F18135 url("images/cont1-5.png") 40px center no-repeat;		
+				padding-left:108px;		;				
+			}
+			.cont1 .right .d3{
+				background:#E85757 url("images/cont1-6.png") 40px center no-repeat;		
+				padding-left:108px;		;				
+			}
+
+			.cont1 .right .d1 .p1,.cont1 .right .d2 .p1,.cont1 .right .d3 .p1{
+				font-size:28px;
+			}
+			.cont1 .right .d1 .p2,.cont1 .right .d2 .p2,.cont1 .right .d3 .p2{
+				font-size:12px;
+			}
+			.cont1,.cont2{
+				margin-bottom:37px;
+			}
+			.cont2{
+				width: 991px;
+				height: 269px;
+				background:#fff;
+				position: relative;
+				padding-left:10px;
+			}
+			.cont2 .img h2,.cont3 .h2 h2,.cont4 .h2 h2,.cont5 .h2 h2{
+				width: 165px;
+				height: 64px;
+				background:#03ABA7;
+				color:#fff;
+				font-size:26px;
+				line-height:64px;
+				text-align:center;
+				position: relative;
+				top:-15px;
+			}
+			.cont2 .img h2::after,.cont3 .h2 h2::after,.cont4 .h2 h2::after,.cont5 .h2 h2::after{
+				content:'';
+				background:url("images/cont2-2.png");
+				width: 8px;
+				height: 15px;
+				position: absolute;
+				right: -8px;
+				top: 0;
+			}
+			.cont2 .img p.p2{
+				font-size:14px;
+				color:#FF6500;
+				line-height:30px;
+			} 
+			.cont2 .img img{
+				margin-bottom:10px;
+			}
+			.cont2 .ul1{
+				width:435px;		
+				margin-left:4px;				
+			}
+			.cont2 .ul1 h2{
+				height:48px;
+				line-height:48px;
+				font-size:16px;
+				font-family: "微软雅黑";
+				color:#333333;
+				margin-left:4px;
+				margin-right:32px;
+			}
+			.cont2 .ul1 h2.h{
+				width:70px;
+				color:#22ABA9;
+				border-bottom:2px solid #22ABA9;
+			}
+			.cont2 .ul1 span a{
+				font-size:12px;
+				color:#999999;
+				line-height:30px;
+				position:relative;
+				top:10px;
+			}
+			.cont2 .ul1 ul{
+				margin-top:5px;
+			}
+			.cont2 .ul1 ul a{
+				line-height:28px;
+				font-size:14px;
+				color:#333333;
+				background:url("images/cont1-3.png") 17px center no-repeat;
+				padding-left:33px;
+			}
+			.cont2 .ul1 ul span{
+				font-size:8px;
+				color:#999;
+				float: right;
+			}
+			.cont2 .ul2{
+				height: 269px;
+			}
+			.cont2 .ul2 h2{
+				margin-top:4px;
+				background:url("images/cont2-4.png")no-repeat left center;
+			}
+			.cont2 .ul2 li a{
+				font-size:14px;
+				line-height:28px;
+				color:#333333;
+				background:url("images/cont2-3.png") 7px center no-repeat;
+				padding-left:23px;
+				text-align:right;
+			}
+			.cont3{
+				width: 991px;
+				background:#fff;
+				position: relative;
+				padding-left:10px;
+				padding-bottom:15px;
+				margin-bottom:36px;
+			}
+			.cont3 .div,.cont4 .h2{
+				width:675px;
+				height:49px;
+				line-height:49px;
+				margin-bottom:20px;
+			}
+			.cont3 .h2 h2,.cont4 .h2 h2{
+				margin-right:63px;
+			}
+			.cont3 .h2 h3,.cont4 .h2 h3{
+				float: left;
+				font-size:16px;
+				color:#333333;
+				font-family: "微软雅黑";
+				padding-top:7px;
+				margin-right:35px;
+			}
+			.cont3 .h2 h3.h,.cont4 .h2 h3.h{
+				color:#22ABA9;
+				border-bottom:2px solid #22ABA9;
+			}
+			.cont3 .h2 a,.cont4 .h2 a{
+				font-size:12px;
+				color:#999999;
+				float: right;
+				position:relative;
+				top:7px;
+				right:9px;
+			}
+			.cont3 div.ul p{
+				color:#333333;
+				font-size:12px;
+				line-height:30px;
+				text-align:center;
+			}
+			.cont3 ul li{
+				margin-right:6px;
+			}
+			.cont3 .ico{
+				width:280px;
+				position: relative;
+				padding-right:20px;
+			}
+			.cont3 .ico .h h2{
+				background:url("images/cont3-7.png") left center no-repeat;
+			}
+			.cont3 .ico .ul1{
+				padding-top:15px;
+				padding-left:22px;
+			}
+			.cont3 .ico .ul1 li{
+				padding-right:24px;
+			}
+			.cont3 .ico .ul1 li p{
+				color:#333333;
+				font-size:12px;
+				line-height:22px;
+			}
+			.cont4{
+				width:991px;
+				height:269px;
+				background:#fff;
+				position: relative;
+				padding-left:10px;
+				padding-bottom:15px;
+				margin-bottom:36px;
+				}
+			.cont4 .h2 h2{
+				position:relative;
+			}
+			.cont4 ul{
+				display: inline-block;
+				width:666px;
+				position: relative;
+			}
+			.cont4 ul a{
+				font-size:14px;
+				color:#333333;
+				line-height:28px;
+				background:url("images/cont1-3.png") 7px center no-repeat;
+				padding-left:25px;
+			}
+			.cont4 ul a.a{
+				background:none;
+				display:inline-block;
+				width:107px;
+				height:36px;
+				line-height:36px;
+				text-align:center;
+				padding-left:0;
+				border:1px solid #FF6500;
+				border-radius:1px;
+				font-family: "微软雅黑";
+				position: absolute;
+				right:-2px;
+				bottom:-54px;
+			}
+			.cont4 ul span{
+				font-size:12px;
+				color:#999999;
+				float: right;
+			}
+			.cont4 .sp{
+				width:280px;
+				position: relative;
+				top:-60px;
+				padding-left:20px;
+			}
+			.cont4 .sp .h h2{
+				background:url("images/cont4-2.png") left center no-repeat;
+			}
+			.cont4 .sp .h img{
+				margin-top:20px;
+			}
+			.cont5{
+				width:991px;
+				padding-left:10px;
+				background:#fff;
+				position: relative;
+				padding-bottom: 5px;
+				margin-bottom:20px;
+			}
+			.cont5 .h2{
+				width:970px;
+				margin-bottom:12px;
+			}
+			.cont5 .h2 a{				
+				position: relative;
+				top:12px;
+			}
+			.cont5 ul li{
+				margin-right:10px;
+			}
+			.cont5 ul li p{
+				font-size:12px;
+				color:#333333;
+				line-height:30px;
+				text-align:center;
+			}			
+			.cont6{
+				width:991px;
+				background:#fff;
+				padding-left:10px;
+				padding-top:10px;
+				padding-bottom:15px;
+			}
+			.cont6 .r .h{
+				width:300px;
+				margin-right:10px;
+			}
+			.cont6 .r .h h2{
+				background:url(images/cont6-2.png) no-repeat left center;
+			}
+			.cont6 .r .h p{
+				font-size:14px;
+				color:#333333;
+				line-height:26px;
+			}
+			.cont6 .r .h p.p1{
+				text-indent:2em;
+				border-bottom:1px dashed #D2D2D2;
+				padding-bottom:16px;
+				padding-top:16px;
+			}
+			.cont6 .r .h p.p1 a{
+				color:#FF6600;
+			}
+			.cont6 .r .h p.p2{
+				padding-top:16px;				
+			}
+			.cont6 .r .h p span{
+				font-weight:bold;
+			}
+			.footer{
+				width:1600px;
+				height:143px;
+				background:#21ABA9;
+			}
+			.footer .db{
+				text-align:center;
+				font-size:14px;
+				line-height:26px;
+				padding-top:34px;
+				color:#fff;
+			}
+			.footer .db p a{
+				color:#fff;
+			}
+        </style>
+    </head>
+    <body>
+    	<div class="box gWidth">
+    		<div class="banner gWidth">
+    			<img src="images/banner.png" height="403" width="1600" alt="">
+    		</div>
+    		<div class="nav gWidth clearfix">
+    			<ul>
+    				<li class="fl"><a href="" class="act">首页</a></li>
+    				<li class="fl"><a href="">社区资讯</a></li>
+    				<li class="fl"><a href="">信息公开</a></li>
+    				<li class="fl"><a href="">社区管理</a></li>
+    				<li class="fl"><a href="">社区服务</a></li>
+    				<li class="fl"><a href="">信息自治</a></li>
+    				<li class="fl"><a href="">互动交流</a></li>
+    				<li class="fl"><a href="">联系我们</a></li>
+    			</ul>
+    		</div>
+
+			<div class="content clearfix"> 
+				<div class="cont1 clearfix">
+					<div class="clearfix">
+						<div class="img fl">
+							<div class="tu">
+							<img src="images/cont1-1.png" height="245" width="345" alt="">
+							<div class="buttons">
+								<span class="act">1</span>
+								<span>2</span>
+								<span>3</span>
+								<span>4</span>
+								<span>5</span>								
+							</div>
+							</div>
+							<p>龙岗区领导杨洪一行走访慰问南坑老党员</p>
+						</div>
+						<div class="ul fl">
+							<h2>民生要闻<a href="###" class="fr">更多+</a></h2>			
+							<ul>
+								<li><a href="###">深圳人的快乐源泉在哪里呢？</a><span>07-31</span></li>
+								<li><a href="###">深圳人的快乐源泉在哪里呢？</a><span>07-31</span></li>
+								<li><a href="###">深圳人的快乐源泉在哪里呢？</a><span>07-31</span></li>
+								<li><a href="###">深圳人的快乐源泉在哪里呢？</a><span>07-31</span></li>
+								<li><a href="###">深圳人的快乐源泉在哪里呢？</a><span>07-31</span></li>
+								<li><a href="###">深圳人的快乐源泉在哪里呢？</a><span>07-31</span></li>
+								<li><a href="###">深圳人的快乐源泉在哪里呢？</a><span>07-31</span></li>
+								<li><a href="###">深圳人的快乐源泉在哪里呢？</a><span>07-31</span></li>
+								<li><a href="###">深圳人的快乐源泉在哪里呢？</a><span>07-31</span></li>
+							</ul>
+						</div>
+						<div class="right fr">
+							<div class="d1">
+								<p class="p1">办事大厅</p>
+								<p class="p2">BANSHIDATING<p>
+							</div>
+
+							<div class="d2">
+								<p class="p1">我要办事</p>
+								<p class="p2">WOYAOBANSHI<p>
+							</div>
+
+							<div class="d3">
+								<p class="p1">给站长写信</p>
+								<p class="p2">GEIZHANZHANGXIEXIN<p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cont2 clearfix">
+					<div class="img fl">
+						<h2>社区资讯</h2>
+						<img src="images/cont2-1.png" height="154" width="224" alt="">
+						<p class="p2">90位候鸟儿童，14天深圳之旅</p>
+					</div>
+					<div class="ul1 fl">
+						<h2 class="fl">通知公告</h2>
+						<h2 class="fl h">社区动态</h2>
+						<h2 class="fl">社区简介</h2>
+						<span class=" clearfix"><a href="###" class="fr">更多+</a></span>
+						<ul>
+							<li><a href="###">以阅读提升个人素质，关注青少年心理健康--省关工...   </a><span>07-08</span></li>
+							<li><a href="###">南坑社区组织党员学习“三严三实 五破五立”精神</a><span>07-08</span></li>
+							<li><a href="###">龙岗区领导杨洪—行走访慰问南坑老党员</a><span>07-08</span></li>
+							<li><a href="###">走，看革命老电影去！</a><span>07-08</span></li>
+							<li><a href="###">“青工咖啡屋”职工交友活动精彩纷呈 </a><span>07-08</span></li>
+							<li><a href="###">南坑教你如何处理孩子情绪的技巧</a><span>07-08</span></li>
+							<li><a href="###">深圳人的快乐源泉在哪里呢？</a><span>07-08</span></li>
+						</ul>
+					</div>
+					<div class="ul2 fr">
+						<h2>办事指南<a href="###" class="fr">更多+</a></h2>			
+						<ul>
+							<li><a href="###">深圳人的快乐源泉在哪里呢？</a><span>07-31</span></li>
+							<li><a href="###">深圳人的快乐源泉在哪里呢？</a><span>07-31</span></li>
+							<li><a href="###">深圳人的快乐源泉在哪里呢？</a><span>07-31</span></li>
+							<li><a href="###">深圳人的快乐源泉在哪里呢？</a><span>07-31</span></li>
+							<li><a href="###">深圳人的快乐源泉在哪里呢？</a><span>07-31</span></li>
+							<li><a href="###">深圳人的快乐源泉在哪里呢？</a><span>07-31</span></li>
+							<li><a href="###">深圳人的快乐源泉在哪里呢？</a><span>07-31</span></li>
+						</ul>
+					</div>
+				</div> 
+
+				<div class="cont3 clearfix">
+				   <div class="div fl clearfix">
+						<div class="h2 clearfix">
+							<h2 class="fl">社区服务</h2>
+							<h3>通知公告</h3>
+							<h3 class="h">社区动态</h3>
+							<h3>社区简介</h3>
+							<a href="###">更多+</a>
+						</div> 
+						<div class="ul fl">						
+							<ul class=" fl">
+								<li class="fl">
+									<img src="images/cont3-1.png" height="90" width="105">
+									<p>社区工作站</p>
+								</li>
+
+								<li class="fl">
+									<img src="images/cont3-2.png" height="90" width="105">
+									<p>社区居委会</p>
+								</li>
+
+								<li class="fl">
+									<img src="images/cont3-3.png" height="90" width="105">
+									<p>社区服务中心</p>
+								</li>
+
+								<li class="fl">
+									<img src="images/cont3-4.png" height="90" width="105">
+									<p>物业公司 </p>
+								</li>
+
+								<li class="fl">
+									<img src="images/cont3-5.png" height="90" width="105">
+									<p>业委会</p>
+								</li>
+
+								<li class="fl">
+									<img src="images/cont3-6.png" height="90" width="105">
+									<p>社康中心</p>
+								</li>
+							</ul> 
+							<ul class=" fl">
+								<li class="fl">
+									<img src="images/cont3-1.png" height="90" width="105">
+									<p>社区工作站</p>
+								</li>
+
+								<li class="fl">
+									<img src="images/cont3-2.png" height="90" width="105">
+									<p>社区工作站</p>
+								</li>
+
+								<li class="fl">
+									<img src="images/cont3-3.png" height="90" width="105">
+									<p>社区工作站</p>
+								</li>
+
+								<li class="fl">
+									<img src="images/cont3-4.png" height="90" width="105">
+									<p>社区工作站</p>
+								</li>
+
+								<li class="fl">
+									<img src="images/cont3-5.png" height="90" width="105">
+									<p>社区工作站</p>
+								</li>
+
+								<li class="fl">
+									<img src="images/cont3-6.png" height="90" width="105">
+									<p>社区工作站</p>
+								</li>
+							</ul> 
+						</div>
+				   </div>
+					<div class="ico fr clearfix">	
+						<div class="h">
+							<h2>便民服务<a href="###" class="fr">更多+</a></h2>	
+						</div>
+						<ul class=" ul1 clearfix">
+							<li class="fl">
+								<img src="images/cont3-8.png" height="57" width="56" alt="">
+								<p>气费查询</p>
+							</li>
+
+							<li class="fl">
+								<img src="images/cont3-9.png" height="57" width="56" alt="">
+								<p>违章查询</p>
+							</li>
+
+							<li class="fl">
+								<img src="images/cont3-10.png" height="57" width="56" alt="">
+								<p>挂号查询</p>
+							</li>
+							<li class="fl">
+								<img src="images/cont3-11.png" height="57" width="56" alt="">
+								<p>医保药品</p>
+							</li>
+							<li class="fl">
+								<img src="images/cont3-12.png" height="57" width="56" alt="">
+								<p>房屋买卖</p>
+							</li>
+							<li class="fl">
+								<img src="images/cont3-13.png" height="57" width="56" alt="">
+								<p>考试中心</p>
+							</li>
+							<li class="fl">
+								<img src="images/cont3-14.png" height="57" width="56" alt="">
+								<p>中考高考</p>
+							</li>
+							<li class="fl">
+								<img src="images/cont3-15.png" height="57" width="56" alt="">
+								<p>公交线路</p>
+							</li>
+							<li class="fl">
+								<img src="images/cont3-16.png" height="57" width="56" alt="">
+								<p>挂号查询</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="cont4 clearfix">		
+					<div class="h2 fl clearfix">
+						<h2 class="fl">互动交流</h2>
+						<h3 class="fl">站长信箱</h3>
+						<h3 class=" fl">民意征集</h3>
+						<h3 class="h fl">社会论坛</h3>
+						<a href="###">更多+</a>
+					</div> 
+					<ul class="fl clearfix">
+						<li><a href="###">以阅读提升个人素质，关注青少年心理健康--省关工委主任张帼英一行调研南坑...</a><span>07-06</span></li>
+						<li><a href="###">南坑社区组织党员学习“三严三实 五破五立”精神</a><span>07-06</span></li>
+						<li><a href="###">龙岗区领导杨洪—行走访慰问南坑老党员</a><span>07-06</span></li>
+						<li><a href="###">走，看革命老电影去！</a><span>07-06</span></li>
+						<li><a href="###">“青工咖啡屋”职工交友活动精彩纷呈 </a><span>07-06</span></li>
+						<li><p><a href="###" class="a">我要发帖</a></p></li>
+					</ul>
+					
+					<div class="sp fl clearfix">					
+						<div class="h">
+							<h2>便民服务<a href="###" class="fr">更多+</a></h2>	
+							<img src="images/cont4-1.png" height="191" width="277" alt="">
+						</div>
+					</div>
+				</div>
+				<div class="cont5 clearfix">
+					<div class="h2 fl">
+						<h2 class="fl">社区图片</h2>
+						<a href="###" class="fr">更多+</a>
+					</div>
+					<ul class="fl">
+						<li class="fl">
+							<img src="images/cont5-1.png" height="125" width="188" alt="">
+							<p>小区一角</p>
+						</li>
+						<li class="fl">
+							<img src="images/cont5-2.png" height="125" width="188" alt="">
+							<p>坂田手造街全景</p>
+						</li>                       
+						<li class="fl">
+							<img src="images/cont5-3.png" height="125" width="188" alt="">
+							<p>创意园</p>
+						</li>
+						<li class="fl">
+							<img src="images/cont5-4.png" height="125" width="188" alt="">
+							<p>手造街门楼</p>
+						</li>
+						<li class="fl">
+							<img src="images/cont5-5.png" height="125" width="188" alt="">
+							<p>南坑水库</p>
+						</li>
+					</ul>
+				</div>
+				<div class="cont6 clearfix">
+					<div class="l fl">
+						<img src="images/cont6-1.png" height="323" width="663" alt="">
+					</div>
+					<div class="r fr">
+						<div class="h">
+							<h2>联系我们<a href="###" class="fr a">更多+</a></h2>	
+
+							<p class="p1">南坑社区位于龙岗区坂田街道最南端，南面与罗湖区、福田区交界，西面与龙华新区交界，离梅林关只有1.2公里，区位优势非常明显。南坑社区成立于06年12月，是典型的“城中村”社区，面积......<a href="###">【详情】</a> </p>
+							<p class="p2"><span>地址：</span>龙岗区坂田街道南坑综合市场3楼
+							<p><span>联系人：</span>罗辉萍</p>
+							<p><span>联系电话：</span>84190839</p>
+							<p><span>工作时间：</span>周一至周五上午9：00--12:00</p>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+
+			<div class="footer">			
+			    <div class="db">
+					<p><a href="http://www.szshequ.org/home/index.html" target="_blank">深圳社区家园网</a> 版权所有 Copyright © www.gbsq.org All Right Reserved.<a href="###">后台管理入口</a></p>
+					<p><a href="###">互联网违法和不良信息举报中心</a> 粤ICP备11066310号-1</p>
+				</div>
+			</div>
+    	</div>
+    </body>
+</html>
